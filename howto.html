@@ -72,3 +72,77 @@
   place-items:center;
   min-height:100vh;
   background:#f6f7fb;
+}</code></pre>
+
+    <p><b>Penjelasan:</b><br>
+      margin:0 → Hilangkan jarak default browser<br>
+      font-family → Pakai font bawaan sistem (ringan & modern)<br>
+      display:grid + place-items:center → Konten tengah layar (horizontal & vertikal)<br>
+      min-height:100vh → Tinggi layar penuh<br>
+      background:#f6f7fb → Warna background abu-abu lembut
+    </p>
+
+    <h3>Style .card</h3>
+    <pre><code>.card{
+  background:#fff;
+  padding:24px;
+  border-radius:16px;
+  box-shadow:0 10px 30px rgba(0,0,0,.08);
+  text-align:center;
+  max-width:360px;
+  width:90%;
+}</code></pre>
+
+    <p><b>Penjelasan:</b><br>
+      background:#fff → Latar putih<br>
+      padding:24px → Ruang di dalam card<br>
+      border-radius:16px → Sudut membulat<br>
+      box-shadow → Efek bayangan (card kelihatan “ngambang”)<br>
+      text-align:center → Semua teks rata tengah<br>
+      max-width & width → Aman untuk HP & desktop
+    </p>
+
+    <h3>Style tombol</h3>
+    <pre><code>button{
+  margin:14px 0 10px;
+  padding:12px 16px;
+  border:0;
+  border-radius:12px;
+  cursor:pointer;
+  font-weight:700;
+  background:#111827;
+  color:#fff;
+}
+button:hover{ opacity:.9; }</code></pre>
+
+    <p><b>Penjelasan:</b><br>
+      padding → Tombol nyaman diklik<br>
+      border-radius → Tombol rounded<br>
+      cursor:pointer → Kursor berubah saat hover<br>
+      font-weight:700 → Teks tebal<br>
+      background & color → Warna kontras<br>
+      button:hover → Saat mouse diarahkan, warnanya sedikit berubah
+    </p>
+
+    <h3>Style teks kecil</h3>
+    <pre><code>small{ color:#6b7280; }</code></pre>
+    <p>→ Warna abu-abu supaya tidak terlalu dominan.</p>
+
+    <h2>3) script.js (Fungsi Tombol)</h2>
+    <pre><code>document.getElementById("joinBtn").onclick = () => {
+  window.open("https://forms.gle/wsncdmBanrWvL1xw6", "_blank");
+};</code></pre>
+
+    <p><b>Penjelasan:</b><br>
+      → Ambil tombol dengan id="joinBtn" lalu pasang event klik.<br>
+      → Saat tombol diklik: buka Google Form.<br>
+      → _blank artinya tab baru.<br>
+      → Tutup fungsi klik.
+    </p>
+
+    <div class="btn-row">
+      <a class="link-btn" href="index.html">← Back</a>
+    </div>
+  </main>
+</body>
+</html>
