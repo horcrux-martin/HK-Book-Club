@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Cara Bikin - Hongkong Book Club</title>
+  <title>Cara Bikin - Hong Kong Book Club</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -11,14 +11,18 @@
     <h1>Cara Bikin</h1>
 
     <h2>1) index.html (Struktur Halaman Website)</h2>
-    <p><code>&lt;!doctype html&gt;</code><br>→ Memberi tahu browser bahwa ini adalah dokumen HTML5.</p>
+
+    <p><code>&lt;!doctype html&gt;</code><br>
+      → Memberi tahu browser bahwa ini adalah dokumen HTML5.
+    </p>
 
     <p><code>&lt;html lang="en"&gt;</code><br>
       → Membungkus seluruh isi website.<br>
-      <code>lang="en"</code> menandakan bahasa utama kontennya Bahasa Inggris (baik untuk SEO & aksesibilitas).
+      lang="en" menandakan bahasa utama kontennya Bahasa Inggris (baik untuk SEO & aksesibilitas).
     </p>
 
     <h3>Bagian &lt;head&gt;</h3>
+
     <p><code>&lt;meta charset="utf-8" /&gt;</code><br>
       → Supaya teks bisa menampilkan semua karakter dengan benar (termasuk simbol & emoji).
     </p>
@@ -36,23 +40,25 @@
     </p>
 
     <h3>Bagian &lt;body&gt;</h3>
+
     <p><code>&lt;main class="card"&gt;</code><br>
       → Elemen utama halaman.<br>
-      <code>class="card"</code> dipakai supaya bisa di-style lewat CSS (tampil seperti kartu).
+      class="card" dipakai supaya bisa di-style lewat CSS (tampil seperti kartu).
     </p>
 
     <p><code>&lt;h1&gt;Hongkong Book Club&lt;/h1&gt;</code><br>
       → Judul utama website.
     </p>
 
-    <p><code>&lt;p&gt;Every Sunday • 9:00 AM&lt;/p&gt;</code><br>
+    <p>
+      <code>&lt;p&gt;Every Sunday • 9:00 AM&lt;/p&gt;</code><br>
       <code>&lt;p&gt;Victoria Park, Causeway Bay&lt;/p&gt;</code><br>
       → Informasi kegiatan (jadwal & lokasi).
     </p>
 
-    <p><code>&lt;button id="joinBtn"&gt;Join &amp; Register&lt;/button&gt;</code><br>
+    <p><code>&lt;button id="joinBtn"&gt;Join & Register&lt;/button&gt;</code><br>
       → Tombol untuk daftar.<br>
-      <code>id="joinBtn"</code> dipakai oleh JavaScript supaya tombol ini bisa diklik dan diberi aksi.
+      id="joinBtn" dipakai oleh JavaScript supaya tombol ini bisa diklik dan diberi aksi.
     </p>
 
     <p><code>&lt;small&gt;Bring a book and come say hi ✨&lt;/small&gt;</code><br>
@@ -64,7 +70,7 @@
     </p>
 
     <h2>2) style.css (Tampilan / Desain)</h2>
-    <h3>Style untuk &lt;body&gt;</h3>
+
     <pre><code>body{
   margin:0;
   font-family:system-ui, Arial, sans-serif;
@@ -72,18 +78,9 @@
   place-items:center;
   min-height:100vh;
   background:#f6f7fb;
-}</code></pre>
+}
 
-    <p><b>Penjelasan:</b><br>
-      margin:0 → Hilangkan jarak default browser<br>
-      font-family → Pakai font bawaan sistem (ringan & modern)<br>
-      display:grid + place-items:center → Konten tengah layar (horizontal & vertikal)<br>
-      min-height:100vh → Tinggi layar penuh<br>
-      background:#f6f7fb → Warna background abu-abu lembut
-    </p>
-
-    <h3>Style .card</h3>
-    <pre><code>.card{
+.card{
   background:#fff;
   padding:24px;
   border-radius:16px;
@@ -91,19 +88,9 @@
   text-align:center;
   max-width:360px;
   width:90%;
-}</code></pre>
+}
 
-    <p><b>Penjelasan:</b><br>
-      background:#fff → Latar putih<br>
-      padding:24px → Ruang di dalam card<br>
-      border-radius:16px → Sudut membulat<br>
-      box-shadow → Efek bayangan (card kelihatan “ngambang”)<br>
-      text-align:center → Semua teks rata tengah<br>
-      max-width & width → Aman untuk HP & desktop
-    </p>
-
-    <h3>Style tombol</h3>
-    <pre><code>button{
+button{
   margin:14px 0 10px;
   padding:12px 16px;
   border:0;
@@ -113,32 +100,102 @@
   background:#111827;
   color:#fff;
 }
-button:hover{ opacity:.9; }</code></pre>
 
-    <p><b>Penjelasan:</b><br>
-      padding → Tombol nyaman diklik<br>
-      border-radius → Tombol rounded<br>
-      cursor:pointer → Kursor berubah saat hover<br>
-      font-weight:700 → Teks tebal<br>
-      background & color → Warna kontras<br>
-      button:hover → Saat mouse diarahkan, warnanya sedikit berubah
-    </p>
+button:hover{ opacity:.9; }
 
-    <h3>Style teks kecil</h3>
-    <pre><code>small{ color:#6b7280; }</code></pre>
-    <p>→ Warna abu-abu supaya tidak terlalu dominan.</p>
+small{ color:#6b7280; }</code></pre>
 
     <h2>3) script.js (Fungsi Tombol)</h2>
+
     <pre><code>document.getElementById("joinBtn").onclick = () => {
   window.open("https://forms.gle/wsncdmBanrWvL1xw6", "_blank");
 };</code></pre>
 
-    <p><b>Penjelasan:</b><br>
-      → Ambil tombol dengan id="joinBtn" lalu pasang event klik.<br>
-      → Saat tombol diklik: buka Google Form.<br>
-      → _blank artinya tab baru.<br>
-      → Tutup fungsi klik.
-    </p>
+    <h2>Script Lengkap</h2>
+
+    <h3>index.html</h3>
+    <pre><code>&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8" /&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;
+  &lt;title&gt;Hongkong Book Club&lt;/title&gt;
+  &lt;link rel="stylesheet" href="style.css" /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;main class="card"&gt;
+    &lt;h1&gt;Hongkong Book Club&lt;/h1&gt;
+    &lt;p&gt;Every Sunday • 9:00 AM&lt;/p&gt;
+    &lt;p&gt;Victoria Park, Causeway Bay&lt;/p&gt;
+    &lt;button id="joinBtn"&gt;Join & Register&lt;/button&gt;
+    &lt;small&gt;Bring a book and come say hi ✨&lt;/small&gt;
+  &lt;/main&gt;
+  &lt;script src="script.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+    <h3>index.html</h3>
+<button class="copyBtn" data-target="code-index">Copy Code</button>
+
+<pre><code id="code-index">&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8" /&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;
+  &lt;title&gt;Hongkong Book Club&lt;/title&gt;
+  &lt;link rel="stylesheet" href="style.css" /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;main class="card"&gt;
+    &lt;h1&gt;Hongkong Book Club&lt;/h1&gt;
+    &lt;p&gt;Every Sunday • 9:00 AM&lt;/p&gt;
+    &lt;p&gt;Victoria Park, Causeway Bay&lt;/p&gt;
+    &lt;button id="joinBtn"&gt;Join & Register&lt;/button&gt;
+    &lt;small&gt;Bring a book and come say hi ✨&lt;/small&gt;
+  &lt;/main&gt;
+  &lt;script src="script.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+    <h3>style.css</h3>
+    <pre><code>body{
+  margin:0;
+  font-family:system-ui, Arial, sans-serif;
+  display:grid;
+  place-items:center;
+  min-height:100vh;
+  background:#f6f7fb;
+}
+
+.card{
+  background:#fff;
+  padding:24px;
+  border-radius:16px;
+  box-shadow:0 10px 30px rgba(0,0,0,.08);
+  text-align:center;
+  max-width:360px;
+  width:90%;
+}
+
+button{
+  margin:14px 0 10px;
+  padding:12px 16px;
+  border:0;
+  border-radius:12px;
+  cursor:pointer;
+  font-weight:700;
+  background:#111827;
+  color:#fff;
+}
+
+button:hover{ opacity:.9; }
+
+small{ color:#6b7280; }</code></pre>
+
+    <h3>script.js</h3>
+    <pre><code>document.getElementById("joinBtn").onclick = () => {
+  window.open("https://forms.gle/wsncdmBanrWvL1xw6", "_blank");
+};</code></pre>
 
     <div class="btn-row">
       <a class="link-btn" href="index.html">← Back</a>
