@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cara Bikin - Hongkong Book Club</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="card left">
+    <h1>Cara Bikin</h1>
+
+    <h2>1) index.html (Struktur Halaman Website)</h2>
+    <p><code>&lt;!doctype html&gt;</code><br>→ Memberi tahu browser bahwa ini adalah dokumen HTML5.</p>
+
+    <p><code>&lt;html lang="en"&gt;</code><br>
+      → Membungkus seluruh isi website.<br>
+      <code>lang="en"</code> menandakan bahasa utama kontennya Bahasa Inggris (baik untuk SEO & aksesibilitas).
+    </p>
+
+    <h3>Bagian &lt;head&gt;</h3>
+    <p><code>&lt;meta charset="utf-8" /&gt;</code><br>
+      → Supaya teks bisa menampilkan semua karakter dengan benar (termasuk simbol & emoji).
+    </p>
+
+    <p><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;</code><br>
+      → Membuat website responsif di HP, tablet, dan laptop.
+    </p>
+
+    <p><code>&lt;title&gt;Hongkong Book Club&lt;/title&gt;</code><br>
+      → Judul yang muncul di tab browser.
+    </p>
+
+    <p><code>&lt;link rel="stylesheet" href="style.css" /&gt;</code><br>
+      → Menghubungkan file CSS agar HTML punya tampilan yang rapi.
+    </p>
+
+    <h3>Bagian &lt;body&gt;</h3>
+    <p><code>&lt;main class="card"&gt;</code><br>
+      → Elemen utama halaman.<br>
+      <code>class="card"</code> dipakai supaya bisa di-style lewat CSS (tampil seperti kartu).
+    </p>
+
+    <p><code>&lt;h1&gt;Hongkong Book Club&lt;/h1&gt;</code><br>
+      → Judul utama website.
+    </p>
+
+    <p><code>&lt;p&gt;Every Sunday • 9:00 AM&lt;/p&gt;</code><br>
+      <code>&lt;p&gt;Victoria Park, Causeway Bay&lt;/p&gt;</code><br>
+      → Informasi kegiatan (jadwal & lokasi).
+    </p>
+
+    <p><code>&lt;button id="joinBtn"&gt;Join &amp; Register&lt;/button&gt;</code><br>
+      → Tombol untuk daftar.<br>
+      <code>id="joinBtn"</code> dipakai oleh JavaScript supaya tombol ini bisa diklik dan diberi aksi.
+    </p>
+
+    <p><code>&lt;small&gt;Bring a book and come say hi ✨&lt;/small&gt;</code><br>
+      → Teks kecil sebagai ajakan santai.
+    </p>
+
+    <p><code>&lt;script src="script.js"&gt;&lt;/script&gt;</code><br>
+      → Menghubungkan file JavaScript agar tombol bisa membuka Google Form.
+    </p>
+
+    <h2>2) style.css (Tampilan / Desain)</h2>
+    <h3>Style untuk &lt;body&gt;</h3>
+    <pre><code>body{
+  margin:0;
+  font-family:system-ui, Arial, sans-serif;
+  display:grid;
+  place-items:center;
+  min-height:100vh;
+  background:#f6f7fb;
