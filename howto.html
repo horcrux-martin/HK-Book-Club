@@ -201,5 +201,16 @@ small{ color:#6b7280; }</code></pre>
       <a class="link-btn" href="index.html">← Back</a>
     </div>
   </main>
+  <script>
+  document.querySelectorAll(".copyBtn").forEach(btn => {
+    btn.onclick = () => {
+      const code = document.getElementById(btn.dataset.target).innerText;
+      navigator.clipboard.writeText(code);
+      btn.innerText = "Copied!";
+      setTimeout(() => btn.innerText = "Copy Code", 1500);
+    };
+  });
+</script>
+
 </body>
 </html>
