@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Cara Bikin - Hong Kong Book Club</title>
+  <title>Cara Bikin - Hongkong Book Club</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -70,7 +70,6 @@
     </p>
 
     <h2>2) style.css (Tampilan / Desain)</h2>
-
     <pre><code>body{
   margin:0;
   font-family:system-ui, Arial, sans-serif;
@@ -106,7 +105,6 @@ button:hover{ opacity:.9; }
 small{ color:#6b7280; }</code></pre>
 
     <h2>3) script.js (Fungsi Tombol)</h2>
-
     <pre><code>document.getElementById("joinBtn").onclick = () => {
   window.open("https://forms.gle/wsncdmBanrWvL1xw6", "_blank");
 };</code></pre>
@@ -114,30 +112,8 @@ small{ color:#6b7280; }</code></pre>
     <h2>Script Lengkap</h2>
 
     <h3>index.html</h3>
-    <pre><code>&lt;!doctype html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-  &lt;meta charset="utf-8" /&gt;
-  &lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;
-  &lt;title&gt;Hongkong Book Club&lt;/title&gt;
-  &lt;link rel="stylesheet" href="style.css" /&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;main class="card"&gt;
-    &lt;h1&gt;Hongkong Book Club&lt;/h1&gt;
-    &lt;p&gt;Every Sunday • 9:00 AM&lt;/p&gt;
-    &lt;p&gt;Victoria Park, Causeway Bay&lt;/p&gt;
-    &lt;button id="joinBtn"&gt;Join & Register&lt;/button&gt;
-    &lt;small&gt;Bring a book and come say hi ✨&lt;/small&gt;
-  &lt;/main&gt;
-  &lt;script src="script.js"&gt;&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-
-    <h3>index.html</h3>
-<button class="copyBtn" data-target="code-index">Copy Code</button>
-
-<pre><code id="code-index">&lt;!doctype html&gt;
+    <button class="copyBtn" data-target="code-index">Copy Code</button>
+    <pre><code id="code-index">&lt;!doctype html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
   &lt;meta charset="utf-8" /&gt;
@@ -158,7 +134,8 @@ small{ color:#6b7280; }</code></pre>
 &lt;/html&gt;</code></pre>
 
     <h3>style.css</h3>
-    <pre><code>body{
+    <button class="copyBtn" data-target="code-css">Copy Code</button>
+    <pre><code id="code-css">body{
   margin:0;
   font-family:system-ui, Arial, sans-serif;
   display:grid;
@@ -193,7 +170,8 @@ button:hover{ opacity:.9; }
 small{ color:#6b7280; }</code></pre>
 
     <h3>script.js</h3>
-    <pre><code>document.getElementById("joinBtn").onclick = () => {
+    <button class="copyBtn" data-target="code-js">Copy Code</button>
+    <pre><code id="code-js">document.getElementById("joinBtn").onclick = () =&gt; {
   window.open("https://forms.gle/wsncdmBanrWvL1xw6", "_blank");
 };</code></pre>
 
@@ -201,16 +179,16 @@ small{ color:#6b7280; }</code></pre>
       <a class="link-btn" href="index.html">← Back</a>
     </div>
   </main>
-  <script>
-  document.querySelectorAll(".copyBtn").forEach(btn => {
-    btn.onclick = () => {
-      const code = document.getElementById(btn.dataset.target).innerText;
-      navigator.clipboard.writeText(code);
-      btn.innerText = "Copied!";
-      setTimeout(() => btn.innerText = "Copy Code", 1500);
-    };
-  });
-</script>
 
+  <script>
+    document.querySelectorAll(".copyBtn").forEach(btn => {
+      btn.onclick = () => {
+        const code = document.getElementById(btn.dataset.target).innerText;
+        navigator.clipboard.writeText(code);
+        btn.innerText = "Copied!";
+        setTimeout(() => btn.innerText = "Copy Code", 1500);
+      };
+    });
+  </script>
 </body>
 </html>
